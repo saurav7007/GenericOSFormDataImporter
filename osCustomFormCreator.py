@@ -34,5 +34,5 @@ for formName, group in groups:
     #### Reset the index to turn the MultiIndex into columns ####
     df_pivot = df_pivot.reset_index()
     
-    #### Output csv file ######
+    #### Output csv files ######
     df_pivot.to_csv(f'{path_of_output_folder}/{formName}.csv')
