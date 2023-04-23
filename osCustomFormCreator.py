@@ -21,6 +21,7 @@ module = config_obj["module"]["module_type"]
 
 #### Read input file using pandas module ################
 rawData = pd.read_csv(path_of_input_file, sep = ',' , low_memory = False)
+rawData['Field_Name'] = rawData['Form_Name'] + '#' + rawData['Field_Name']
 
 #### Group the data by Form_Name #######
 groups = rawData.groupby('Form_Name')
