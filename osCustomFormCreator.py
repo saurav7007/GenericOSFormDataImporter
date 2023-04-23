@@ -25,7 +25,7 @@ rawData = pd.read_csv(path_of_input_file, sep = ',' , low_memory = False)
 #### Group the data by Form_Name #######
 groups = rawData.groupby('Form_Name')
 
-for name, group in groups:    
+for formName, group in groups:    
     #### Pivot the DataFrame to reshape #######
     df_pivot = group.pivot_table(index=['CP_Title', module], columns='Field_Name', values='Field_Value', aggfunc='first')  
     #### Takes the first value if there are multiple values for a given combination of index and column.
@@ -34,4 +34,4 @@ for name, group in groups:
     df_pivot = df_pivot.reset_index()
     
     #### Output csv file ######
-    df_pivot.to_csv(f'{path_of_output_folder}/{name}.csv')
+    df_pivot.to_csv(f'{path_of_output_folder}/{formName}.csv')
