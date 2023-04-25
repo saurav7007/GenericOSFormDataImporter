@@ -35,4 +35,4 @@ for formName, group in groups:
     df_pivot = df_pivot.reset_index()
     
     #### Output csv files ######
-    df_pivot.to_csv(f'{path_of_output_folder}/{formName}.csv')
+    df_pivot.to_csv(f'{path_of_output_folder}/{formName}.csv', index=False, quoting=2, doublequote=True)
