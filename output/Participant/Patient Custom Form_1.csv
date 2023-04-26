@@ -1,0 +1,5 @@
+"Collection Protocol","PPID","Drinking","Smoking"
+"Breast Cancer","001","Yes","Yes"
+"Breast Cancer","002","Yes","No"
+"Lung Cancer","001","Yes",""
+"Lung Cancer","002","","No"
